@@ -3,172 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cajeta La Reyna - Gourmet</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@900&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+
+    <!-- SEO / Branding -->
+    <title>Dr. Nombre Apellido | Mentoría Académica y Profesional</title>
+    <meta name="description" content="Conversaciones para tomar decisiones académicas y profesionales con mayor claridad.">
+
+    <!-- Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --naranja-brillante: #f9a825;
-            --cafe-oscuro: #4a1d0f;
-            --blanco: #ffffff;
-        }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body, html {
-            height: 100%;
-            width: 100%;
-            background-color: #1a0a05;
-            font-family: 'Open Sans', sans-serif;
-            display: flex;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        /* FONDO PARA PC */
-        .desktop-bg {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 1;
-            background: url('https://res.cloudinary.com/dlylomauh/image/upload/v1776971107/Dise%C3%B1o_sin_t%C3%ADtulo_7_cbkuhu.webp') center bottom / cover no-repeat;
-            filter: blur(50px) brightness(0.3);
-            transform: scale(1.1);
-        }
-
-        /* CONTENEDOR MÓVIL */
-        .main-container {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            max-width: 430px;
-            margin: 0 auto;
-            min-height: 100dvh;
-            background: url('https://res.cloudinary.com/dlylomauh/image/upload/v1776971107/Dise%C3%B1o_sin_t%C3%ADtulo_7_cbkuhu.webp') center bottom / cover no-repeat;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 3% 25px; /* Padding superior mínimo para subir los títulos */
-            box-shadow: 0 0 100px rgba(0,0,0,0.8);
-        }
-
-        /* --- NUEVO ESTILO DE TÍTULO (Basado en tu imagen) --- */
-        .header {
-            text-align: center;
-            margin-bottom: 25px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .script-text {
-            font-family: 'Dancing Script', cursive;
-            color: var(--naranja-brillante);
-            font-size: 3.2rem;
-            margin-bottom: -22px; /* Esto hace que se encime al texto de abajo */
-            z-index: 3;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            transform: rotate(-3deg); /* Le da el toque orgánico */
-        }
-
-        .bold-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            color: var(--blanco);
-            font-size: 4.0rem;
-            line-height: 0.9;
-            letter-spacing: -2px;
-            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
-            z-index: 2;
-        }
-
-        .orange-subtitle {
-            color: var(--naranja-brillante);
-            font-weight: 800;
-            letter-spacing: 3px;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            margin-top: 13px;
-            display: block;
-            margin: 13px 10px 0px 10px;
-        }
-
-        /* BOTONES */
-        .nav-links {
-            width: 100%;
-            max-width: 270px;
-            display: flex;
-            flex-direction: column;
-            gap: 11px;
-            z-index: 4;
-            margin-top: 10px;
-            margin-bottom: auto;
-        }
-
-        .btn {
-            background: #FFFFFF;
-            color: var(--cafe-oscuro);
-            text-decoration: none;
-            padding: 14px;
-            border-radius: 14px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-align: center;
-            transition: 0.3s;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15); 
-            border: 1px solid rgba(255,255,255,0.8); /* Un borde sutil para dar brillo */
-        }
-
-        .btn:hover {
-            background: var(--naranja-brillante); 
-            color: var(--cafe-oscuro); /* El texto queda oscuro para legibilidad */
-            transform: translateY(-3px) scale(1.02); /* Sube un poco más y crece */
-            box-shadow: 0 10px 25px rgba(249, 168, 37, 0.4); /* Sombra naranja brillante */
-        }
-
-        /* FOOTER (RE-POSICIONADO PARA NO PISAR LAS BOTELLAS) */
-        .footer-content {
-            text-align: center;
-            width: 100%;
-            padding-bottom: 20px; /* Respiro para que no toque las botellas */
-        }
-
-
-        .distributor {
-            color: white;
-            font-size: 0.50rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-        }
-
-        @media (max-width: 600px) {
-            .desktop-bg { display: none; }
-            .main-container { max-width: 100%; padding-top: 8%; }
-        }
-    </style>
+    <!-- Tu CSS externo -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <!-- Fondo Blur Desktop -->
     <div class="desktop-bg"></div>
 
     <main class="main-container">
-        
+
+        <!-- HEADER -->
         <header class="header">
-            <span class="script-text">Cajeta</span>
-            <h1 class="bold-title">La Reyna</h1>
-            <span class="orange-subtitle">Cajeta Artesanal Producida en Celaya, México</span>
+
+            <!-- Puedes poner aquí "Científico Mexicano en Europa" -->
+            <span class="script-text">
+                Científico Mexicano en Europa
+            </span>
+
+            <!-- Nombre -->
+            <h1 class="bold-title">
+                Dr. Nombre<br>Apellido
+            </h1>
+
+            <!-- Subheadline -->
+            <span class="orange-subtitle">
+                Conversaciones para tomar decisiones académicas y profesionales con mayor claridad.
+            </span>
+
         </header>
 
+        <!-- BOTONES -->
         <nav class="nav-links">
-            <a href="https://www.amazon.com/s?k=La+Reyna+Cajeta+Artesanal&language=es&ref=bl_dp_s_web_0" class="btn">Comprar en Amazon</a>
-            <a href="#" class="btn">Nuestros Sabores</a>
-            <a href="#" class="btn">Recetas con cajeta</a>
-            <a href="#" class="btn">Conoce más (100% artesanal)</a>
+
+            <a href="#" class="btn">
+                Solicitar sesión 1 a 1
+            </a>
+
+            <a href="#" class="btn">
+                Conferencias para instituciones
+            </a>
+
+            <a href="#" class="btn">
+                Sobre el Dr.
+            </a>
+
+            <a href="#" class="btn">
+                LinkedIn
+            </a>
+
         </nav>
 
+        <!-- FOOTER -->
         <div class="footer-content">
-            <p class="distributor">Distribuido en EE.UU por: Fevamex</p>
+
+            <p class="distributor">
+                Mentoría académica y profesional basada en experiencia internacional
+            </p>
+
         </div>
 
     </main>
