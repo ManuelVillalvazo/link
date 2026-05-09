@@ -15,7 +15,7 @@
     >
 
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
 
     <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -25,9 +25,7 @@
         :root {
 
             --bg-dark: #020617;
-            --bg-card: rgba(15, 23, 42, 0.72);
 
-            --blue-soft: #1E3A5F;
             --blue-accent: #60A5FA;
 
             --white: #FFFFFF;
@@ -71,7 +69,7 @@
             min-height: 100dvh;
 
             padding:
-                38px
+                42px
                 24px
                 30px;
 
@@ -105,35 +103,35 @@
 
         .profile-image {
 
-            width: 135px;
-            height: 135px;
+            width: 140px;
+            height: 140px;
 
             border-radius: 50%;
 
             object-fit: cover;
 
-            margin-bottom: 22px;
+            margin-bottom: 24px;
 
             border: 2px solid rgba(255,255,255,0.08);
 
             box-shadow:
-                0 10px 30px rgba(0,0,0,0.4),
+                0 10px 30px rgba(0,0,0,0.45),
                 0 0 45px rgba(96,165,250,0.12);
         }
 
         .main-title {
 
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Cormorant Garamond', serif;
 
-            font-size: 2.4rem;
+            font-size: 3rem;
 
-            line-height: 1;
+            line-height: 0.95;
 
-            letter-spacing: -2px;
+            letter-spacing: -1px;
 
-            margin-bottom: 14px;
+            margin-bottom: 16px;
 
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .subtitle {
@@ -151,12 +149,12 @@
 
         .section {
 
-            margin-bottom: 24px;
+            margin-bottom: 28px;
         }
 
         .section-title {
 
-            font-size: 0.9rem;
+            font-size: 0.78rem;
 
             text-transform: uppercase;
 
@@ -181,7 +179,7 @@
 
             border-radius: 18px;
 
-            padding: 18px;
+            padding: 20px;
 
             margin-bottom: 14px;
 
@@ -208,11 +206,11 @@
 
         .card-title {
 
-            font-size: 0.96rem;
+            font-size: 1rem;
 
             font-weight: 600;
 
-            margin-bottom: 8px;
+            margin-bottom: 10px;
 
             line-height: 1.5;
         }
@@ -221,9 +219,54 @@
 
             color: var(--gray);
 
-            font-size: 0.86rem;
+            font-size: 0.88rem;
 
             line-height: 1.7;
+        }
+
+        .resource-link {
+
+            margin-top: 12px;
+
+            font-size: 0.78rem;
+
+            opacity: 0.72;
+
+            word-break: break-word;
+        }
+
+        /* INFO BOX */
+
+        .info-box {
+
+            background: rgba(255,255,255,0.04);
+
+            border: 1px solid rgba(255,255,255,0.06);
+
+            border-radius: 20px;
+
+            padding: 22px;
+
+            margin-bottom: 28px;
+        }
+
+        .info-list {
+
+            padding-left: 18px;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 14px;
+        }
+
+        .info-list li {
+
+            color: var(--gray);
+
+            line-height: 1.7;
+
+            font-size: 0.9rem;
         }
 
         /* CONTACTO */
@@ -278,40 +321,13 @@
             text-align: center;
         }
 
-        /* LISTA */
-
-        .info-list {
-
-            display: flex;
-            flex-direction: column;
-
-            gap: 12px;
-        }
-
-        .info-item {
-
-            background: rgba(255,255,255,0.04);
-
-            border: 1px solid rgba(255,255,255,0.06);
-
-            border-radius: 16px;
-
-            padding: 16px;
-
-            color: var(--gray);
-
-            line-height: 1.7;
-
-            font-size: 0.9rem;
-        }
-
         /* FOOTER */
 
         .footer {
 
             margin-top: auto;
 
-            padding-top: 12px;
+            padding-top: 10px;
 
             text-align: center;
         }
@@ -359,19 +375,29 @@
         <section class="section">
 
             <h2 class="section-title">
-                Recursos recomendados
+                Recursos académicos
             </h2>
 
             <div class="card">
 
+                <div class="card-description" style="margin-bottom:18px;">
+
+                    A continuación, se presentan recursos clave para la búsqueda de financiamiento en instituciones de alto prestigio:
+
+                </div>
+
                 <a href="https://www.daad.mx" target="_blank">
 
                     <div class="card-title">
-                        DAAD México — Estudiar en Alemania
+                        DAAD México: Estudiar en Alemania
                     </div>
 
                     <div class="card-description">
-                        Plataforma oficial para intercambios académicos y becas de posgrado en Alemania.
+                        Plataforma oficial para intercambios y becas de posgrado en Alemania.
+                    </div>
+
+                    <div class="resource-link">
+                        https://www.daad.mx
                     </div>
 
                 </a>
@@ -383,16 +409,46 @@
                 <a href="https://www.vivirviajaramar.com" target="_blank">
 
                     <div class="card-title">
-                        11 Mejores Becas para Mexicanos
+                        11 Mejores Becas para Mexicanos (Vivir Viajar Amar)
                     </div>
 
-                    <div class="card-description">
-                        Recursos y oportunidades para estudiar y desarrollarse profesionalmente en el extranjero.
+                    <div class="resource-link">
+                        https://www.vivirviajaramar.com
                     </div>
 
                 </a>
 
             </div>
+
+        </section>
+
+        <!-- UTILIDAD -->
+
+        <section class="info-box">
+
+            <h2 class="section-title">
+                ¿Para quién puede ser útil?
+            </h2>
+
+            <ul class="info-list">
+
+                <li>
+                    Jóvenes que no saben qué carrera elegir
+                </li>
+
+                <li>
+                    Estudiantes que buscan oportunidades en Europa
+                </li>
+
+                <li>
+                    Profesionistas que desean mayor claridad profesional
+                </li>
+
+                <li>
+                    Personas interesadas en becas y desarrollo académico internacional
+                </li>
+
+            </ul>
 
         </section>
 
@@ -426,44 +482,14 @@
 
         </section>
 
-        <!-- UTILIDAD -->
-
-       <section class="info-box">
-
-        <h2 class="section-title">
-            ¿Para quién puede ser útil?
-        </h2>
-    
-        <ul class="info-list">
-
-        <li>
-            Jóvenes que no saben qué carrera elegir
-        </li>
-
-        <li>
-            Estudiantes que buscan oportunidades en Europa
-        </li>
-
-        <li>
-            Profesionistas que desean mayor claridad profesional
-        </li>
-
-        <li>
-            Personas interesadas en becas y desarrollo académico internacional
-        </li>
-
-        </ul>
-        
-        </section>
-        
         <!-- FOOTER -->
-        
+
         <footer class="footer">
-        
+
             <p>
                 Orientación basada en experiencia internacional y trayectoria científica.
             </p>
-        
+
         </footer>
 
     </main>
