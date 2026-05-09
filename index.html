@@ -130,27 +130,14 @@
 
             letter-spacing: -2px;
 
-            margin-bottom: 16px;
-
             font-weight: 800;
-        }
-
-        .subtitle {
-
-            color: var(--gray);
-
-            font-size: 0.96rem;
-
-            line-height: 1.7;
-
-            max-width: 320px;
         }
 
         /* SECCIONES */
 
         .section {
 
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
 
         .section-title {
@@ -166,6 +153,17 @@
             margin-bottom: 14px;
 
             font-weight: 700;
+        }
+
+        .section-text {
+
+            color: var(--gray);
+
+            font-size: 0.9rem;
+
+            line-height: 1.8;
+
+            margin-bottom: 18px;
         }
 
         /* CARDS */
@@ -236,6 +234,83 @@
             word-break: break-word;
         }
 
+        /* DIVIDER */
+
+        .divider {
+
+            width: 100%;
+            height: 1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255,255,255,0.12),
+                    transparent
+                );
+
+            margin:
+                8px
+                0
+                34px;
+        }
+
+        /* BIO */
+
+        .bio-box {
+
+            background: rgba(255,255,255,0.04);
+
+            border: 1px solid rgba(255,255,255,0.06);
+
+            border-radius: 20px;
+
+            padding: 22px;
+
+            margin-bottom: 30px;
+        }
+
+        .bio-text {
+
+            color: var(--gray);
+
+            font-size: 0.92rem;
+
+            line-height: 1.9;
+        }
+
+        /* INFO */
+
+        .info-box {
+
+            background: rgba(255,255,255,0.04);
+
+            border: 1px solid rgba(255,255,255,0.06);
+
+            border-radius: 20px;
+
+            padding: 22px;
+        }
+
+        .info-list {
+
+            padding-left: 18px;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 14px;
+        }
+
+        .info-list li {
+
+            color: var(--gray);
+
+            line-height: 1.8;
+
+            font-size: 0.92rem;
+        }
+
         /* CONTACTO */
 
         .contact-links {
@@ -286,38 +361,6 @@
             width: 18px;
 
             text-align: center;
-        }
-
-        /* INFO BOX */
-
-        .info-box {
-
-            background: rgba(255,255,255,0.04);
-
-            border: 1px solid rgba(255,255,255,0.06);
-
-            border-radius: 20px;
-
-            padding: 22px;
-        }
-
-        .info-list {
-
-            padding-left: 18px;
-
-            display: flex;
-            flex-direction: column;
-
-            gap: 14px;
-        }
-
-        .info-list li {
-
-            color: var(--gray);
-
-            line-height: 1.7;
-
-            font-size: 0.92rem;
         }
 
         /* FOOTER */
@@ -376,10 +419,6 @@
                 Villalvazo
             </h1>
 
-            <p class="subtitle">
-                Recursos académicos, oportunidades internacionales y contacto profesional.
-            </p>
-
         </header>
 
         <!-- RECURSOS -->
@@ -390,13 +429,11 @@
                 Recursos académicos
             </h2>
 
+            <p class="section-text">
+                A continuación, se presentan recursos clave para la búsqueda de financiamiento en instituciones de alto prestigio:
+            </p>
+
             <div class="card">
-
-                <div class="card-description" style="margin-bottom: 18px;">
-
-                    A continuación, se presentan recursos clave para la búsqueda de financiamiento en instituciones de alto prestigio:
-
-                </div>
 
                 <a href="https://www.daad.mx" target="_blank">
 
@@ -429,6 +466,29 @@
                     </div>
 
                 </a>
+
+            </div>
+
+        </section>
+
+        <!-- DIVIDER -->
+
+        <div class="divider"></div>
+
+        <!-- BIO -->
+
+        <section class="section">
+
+            <div class="bio-box">
+
+                <h2 class="section-title">
+                    Sobre el Dr. Manuel Villalvazo
+                </h2>
+
+                <p class="bio-text">
+                    Científico mexicano con trayectoria profesional en Europa y experiencia en proyectos académicos e internacionales. 
+                    A través de conferencias y orientación personalizada, comparte herramientas, perspectivas y oportunidades para jóvenes interesados en su desarrollo profesional y académico.
+                </p>
 
             </div>
 
@@ -473,7 +533,7 @@
         <section class="section">
 
             <h2 class="section-title">
-                Contacto
+                Contáctame. Yo te digo cómo.
             </h2>
 
             <div class="contact-links">
