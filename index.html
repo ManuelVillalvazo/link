@@ -11,11 +11,11 @@
 
     <meta 
         name="description" 
-        content="Recursos académicos, becas y contacto profesional del Dr. Manuel Villalvazo."
+        content="Recursos académicos, oportunidades internacionales y contacto profesional del Dr. Manuel Villalvazo."
     >
 
-    <!-- FUENTES -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
 
     <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -25,9 +25,9 @@
         :root {
 
             --bg-dark: #020617;
-            --bg-card: rgba(15, 23, 42, 0.72);
 
-            --blue-accent: #60A5FA;
+            --blue-main: #60A5FA;
+            --blue-soft: #1E293B;
 
             --white: #FFFFFF;
             --gray: #CBD5E1;
@@ -41,8 +41,7 @@
             box-sizing: border-box;
         }
 
-        html,
-        body {
+        html, body {
 
             width: 100%;
             min-height: 100%;
@@ -53,8 +52,8 @@
             font-family: 'Inter', sans-serif;
 
             background:
-                radial-gradient(circle at top, rgba(96,165,250,0.14), transparent 35%),
-                radial-gradient(circle at bottom, rgba(30,58,95,0.25), transparent 45%),
+                radial-gradient(circle at top, rgba(96,165,250,0.12), transparent 35%),
+                radial-gradient(circle at bottom, rgba(30,41,59,0.35), transparent 45%),
                 linear-gradient(180deg, #020617 0%, #0F172A 100%);
 
             color: var(--white);
@@ -62,8 +61,6 @@
             display: flex;
             justify-content: center;
         }
-
-        /* CONTENEDOR */
 
         .main-container {
 
@@ -73,14 +70,14 @@
             min-height: 100dvh;
 
             padding:
-                38px
+                42px
                 24px
-                30px;
+                32px;
 
             display: flex;
             flex-direction: column;
 
-            background: rgba(2,6,23,0.42);
+            background: rgba(2,6,23,0.45);
 
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
@@ -102,7 +99,7 @@
 
             text-align: center;
 
-            margin-bottom: 34px;
+            margin-bottom: 38px;
         }
 
         .profile-image {
@@ -119,30 +116,30 @@
             border: 2px solid rgba(255,255,255,0.08);
 
             box-shadow:
-                0 10px 30px rgba(0,0,0,0.4),
-                0 0 45px rgba(96,165,250,0.12);
+                0 10px 30px rgba(0,0,0,0.45),
+                0 0 50px rgba(96,165,250,0.12);
         }
 
         .main-title {
 
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Manrope', sans-serif;
 
-            font-size: 2.55rem;
+            font-size: 2.6rem;
 
-            line-height: 1;
+            line-height: 0.95;
 
             letter-spacing: -2px;
 
             margin-bottom: 16px;
 
-            font-weight: 700;
+            font-weight: 800;
         }
 
         .subtitle {
 
             color: var(--gray);
 
-            font-size: 0.95rem;
+            font-size: 0.96rem;
 
             line-height: 1.7;
 
@@ -153,7 +150,7 @@
 
         .section {
 
-            margin-bottom: 28px;
+            margin-bottom: 30px;
         }
 
         .section-title {
@@ -164,7 +161,7 @@
 
             letter-spacing: 2px;
 
-            color: var(--blue-accent);
+            color: var(--blue-main);
 
             margin-bottom: 14px;
 
@@ -177,7 +174,7 @@
 
             width: 100%;
 
-            background: rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.045);
 
             border: 1px solid rgba(255,255,255,0.08);
 
@@ -228,13 +225,13 @@
             line-height: 1.7;
         }
 
-        .card-link {
+        .resource-link {
 
             margin-top: 12px;
 
-            font-size: 0.8rem;
+            font-size: 0.82rem;
 
-            color: rgba(203,213,225,0.65);
+            color: rgba(203,213,225,0.72);
 
             word-break: break-word;
         }
@@ -253,7 +250,7 @@
 
             width: 100%;
 
-            padding: 17px 18px;
+            padding: 16px 18px;
 
             border-radius: 18px;
 
@@ -320,7 +317,7 @@
 
             line-height: 1.7;
 
-            font-size: 0.9rem;
+            font-size: 0.92rem;
         }
 
         /* FOOTER */
@@ -341,6 +338,19 @@
             font-size: 0.72rem;
 
             line-height: 1.7;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .main-container {
+                max-width: 100%;
+            }
+
+            .main-title {
+                font-size: 2.3rem;
+            }
         }
 
     </style>
@@ -398,7 +408,7 @@
                         Plataforma oficial para intercambios y becas de posgrado en Alemania.
                     </div>
 
-                    <div class="card-link">
+                    <div class="resource-link">
                         https://www.daad.mx
                     </div>
 
@@ -414,7 +424,7 @@
                         11 Mejores Becas para Mexicanos (Vivir Viajar Amar)
                     </div>
 
-                    <div class="card-link">
+                    <div class="resource-link">
                         https://www.vivirviajaramar.com
                     </div>
 
