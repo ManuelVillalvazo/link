@@ -2,20 +2,15 @@
 <html lang="es">
 <head>
 
-    <!-- CONFIG -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    <title>Dr. Manuel Villalvazo | Recursos Académicos</title>
-
-    <meta 
-        name="description" 
-        content="Recursos académicos, oportunidades internacionales y contacto profesional del Dr. Manuel Villalvazo."
-    >
+    <title>
+        Dr. Manuel Villalvazo
+    </title>
 
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -24,44 +19,51 @@
 
         :root {
 
-            --bg-dark: #020617;
-            --bg-soft: #0F172A;
-
-            --blue-main: #60A5FA;
-            --blue-soft: rgba(96,165,250,0.12);
-
-            --white: #FFFFFF;
-            --gray: #CBD5E1;
-
-            --border: rgba(255,255,255,0.08);
+            --bg:
+                #020617;
 
             --card:
-                linear-gradient(
-                    180deg,
-                    rgba(255,255,255,0.06) 0%,
-                    rgba(255,255,255,0.03) 100%
-                );
+                rgba(15, 23, 42, 0.72);
+
+            --card-light:
+                rgba(255,255,255,0.04);
+
+            --border:
+                rgba(255,255,255,0.08);
+
+            --blue:
+                #60A5FA;
+
+            --blue-strong:
+                #2563EB;
+
+            --white:
+                #FFFFFF;
+
+            --gray:
+                #CBD5E1;
         }
 
         * {
+
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html, body {
+        html,
+        body {
 
             width: 100%;
             min-height: 100%;
 
             overflow-x: hidden;
-            overflow-y: auto;
 
             font-family: 'Inter', sans-serif;
 
             background:
-                radial-gradient(circle at top, rgba(96,165,250,0.12), transparent 35%),
-                radial-gradient(circle at bottom, rgba(30,41,59,0.30), transparent 45%),
+                radial-gradient(circle at top left, rgba(37,99,235,0.22), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(96,165,250,0.18), transparent 32%),
                 linear-gradient(180deg, #020617 0%, #0F172A 100%);
 
             color: var(--white);
@@ -78,102 +80,166 @@
             min-height: 100dvh;
 
             padding:
-                42px
-                22px
-                32px;
+                26px
+                18px
+                50px;
 
             display: flex;
             flex-direction: column;
-            gap: 26px;
 
-            background: rgba(2,6,23,0.42);
-
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-
-            border-left: 1px solid var(--border);
-            border-right: 1px solid var(--border);
-
-            box-shadow:
-                0 0 80px rgba(0,0,0,0.35);
+            gap: 18px;
         }
 
-        /* HEADER */
+        /* HERO */
 
-        .header {
+        .hero {
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(37,99,235,0.22),
+                    rgba(15,23,42,0.92)
+                );
+
+            border:
+                1px solid rgba(255,255,255,0.08);
+
+            border-radius: 32px;
+
+            padding:
+                34px
+                24px
+                28px;
 
             text-align: center;
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            box-shadow:
+                0 25px 60px rgba(0,0,0,0.35);
+        }
 
-            padding-bottom: 8px;
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+            height: 180px;
+
+            background:
+                radial-gradient(circle, rgba(96,165,250,0.28), transparent 70%);
+
+            top: -60px;
+            right: -60px;
         }
 
         .profile-image {
 
-            width: 138px;
-            height: 138px;
+            width: 118px;
+            height: 118px;
 
             border-radius: 50%;
 
             object-fit: cover;
 
-            margin-bottom: 22px;
-
-            border: 2px solid rgba(255,255,255,0.08);
+            border:
+                3px solid rgba(255,255,255,0.12);
 
             box-shadow:
-                0 12px 35px rgba(0,0,0,0.45),
-                0 0 55px rgba(96,165,250,0.10);
+                0 10px 30px rgba(0,0,0,0.45);
+
+            margin-bottom: 20px;
+
+            position: relative;
+            z-index: 2;
         }
 
         .main-title {
 
-            font-family: 'Manrope', sans-serif;
-
-            font-size: 2.5rem;
+            font-size: 2.4rem;
 
             line-height: 0.95;
 
             letter-spacing: -2px;
 
             font-weight: 800;
+
+            margin-bottom: 14px;
+
+            position: relative;
+            z-index: 2;
         }
 
-        /* SECCIONES */
+        .hero-subtitle {
+
+            color: rgba(255,255,255,0.76);
+
+            font-size: 0.92rem;
+
+            line-height: 1.8;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        /* SECTION BLOCK */
 
         .section {
 
             background: var(--card);
 
-            border: 1px solid rgba(255,255,255,0.07);
+            border:
+                1px solid var(--border);
 
-            border-radius: 24px;
+            border-radius: 26px;
 
-            padding: 24px 20px;
+            overflow: hidden;
 
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(16px);
 
             box-shadow:
-                inset 0 1px 0 rgba(255,255,255,0.03),
-                0 8px 30px rgba(0,0,0,0.18);
+                0 10px 35px rgba(0,0,0,0.18);
+        }
+
+        .section-top {
+
+            padding:
+                16px
+                20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(37,99,235,0.22),
+                    rgba(255,255,255,0)
+                );
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.06);
         }
 
         .section-title {
 
-            font-size: 0.78rem;
+            font-size: 0.8rem;
 
             text-transform: uppercase;
 
             letter-spacing: 2px;
 
-            color: var(--blue-main);
-
-            margin-bottom: 16px;
+            color: var(--blue);
 
             font-weight: 700;
+        }
+
+        .section-content {
+
+            padding:
+                22px
+                20px;
         }
 
         .section-text {
@@ -182,20 +248,22 @@
 
             font-size: 0.92rem;
 
-            line-height: 1.85;
+            line-height: 1.9;
 
             margin-bottom: 18px;
         }
 
-        /* RECURSOS */
+        /* RESOURCES */
 
         .resource-card {
 
-            background: rgba(255,255,255,0.03);
+            background:
+                rgba(255,255,255,0.03);
 
-            border: 1px solid rgba(255,255,255,0.06);
+            border:
+                1px solid rgba(255,255,255,0.06);
 
-            border-radius: 18px;
+            border-radius: 20px;
 
             padding: 18px;
 
@@ -205,16 +273,20 @@
         }
 
         .resource-card:last-child {
+
             margin-bottom: 0;
         }
 
         .resource-card:hover {
 
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
 
-            border-color: rgba(96,165,250,0.18);
+            border-color:
+                rgba(96,165,250,0.24);
 
-            background: rgba(96,165,250,0.06);
+            background:
+                rgba(96,165,250,0.06);
         }
 
         .resource-card a {
@@ -226,9 +298,9 @@
 
         .resource-title {
 
-            font-size: 0.98rem;
+            font-size: 0.96rem;
 
-            font-weight: 600;
+            font-weight: 700;
 
             line-height: 1.6;
 
@@ -248,29 +320,46 @@
 
         .resource-link {
 
-            color: rgba(203,213,225,0.65);
-
             font-size: 0.78rem;
+
+            color: rgba(255,255,255,0.48);
 
             word-break: break-word;
         }
 
         /* BIO */
 
-        .bio-text {
+        .bio-highlight {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(37,99,235,0.18),
+                    rgba(255,255,255,0.02)
+                );
+
+            border:
+                1px solid rgba(96,165,250,0.12);
+
+            border-radius: 20px;
+
+            padding: 20px;
+        }
+
+        .bio-highlight p {
 
             color: var(--gray);
 
-            font-size: 0.92rem;
-
             line-height: 1.95;
+
+            font-size: 0.92rem;
         }
 
-        /* LISTA */
+        /* LIST */
 
         .info-list {
 
-            padding-left: 18px;
+            list-style: none;
 
             display: flex;
             flex-direction: column;
@@ -280,16 +369,44 @@
 
         .info-list li {
 
+            display: flex;
+            align-items: flex-start;
+
+            gap: 12px;
+
             color: var(--gray);
 
             line-height: 1.8;
 
             font-size: 0.92rem;
+
+            padding:
+                14px
+                14px;
+
+            background:
+                rgba(255,255,255,0.03);
+
+            border:
+                1px solid rgba(255,255,255,0.05);
+
+            border-radius: 18px;
         }
 
-        /* CONTACTO */
+        .info-list li::before {
 
-        .contact-links {
+            content: "•";
+
+            color: var(--blue);
+
+            font-size: 1.1rem;
+
+            margin-top: -1px;
+        }
+
+        /* CONTACT */
+
+        .contact-buttons {
 
             display: flex;
             flex-direction: column;
@@ -299,44 +416,89 @@
 
         .contact-btn {
 
-            width: 100%;
-
-            padding: 17px 18px;
-
-            border-radius: 18px;
-
             text-decoration: none;
 
             color: white;
 
-            font-weight: 600;
-
-            background: rgba(255,255,255,0.04);
-
-            border: 1px solid rgba(255,255,255,0.07);
-
             display: flex;
             align-items: center;
 
-            gap: 12px;
+            gap: 14px;
+
+            padding:
+                18px
+                18px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.05),
+                    rgba(255,255,255,0.03)
+                );
+
+            border:
+                1px solid rgba(255,255,255,0.08);
 
             transition: 0.25s ease;
         }
 
         .contact-btn:hover {
 
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
 
-            background: rgba(96,165,250,0.08);
+            background:
+                rgba(96,165,250,0.08);
 
-            border-color: rgba(96,165,250,0.20);
+            border-color:
+                rgba(96,165,250,0.18);
         }
 
-        .contact-btn i {
+        .contact-icon {
 
-            width: 18px;
+            width: 44px;
+            height: 44px;
 
-            text-align: center;
+            border-radius: 14px;
+
+            background:
+                rgba(96,165,250,0.12);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: var(--blue);
+
+            font-size: 1rem;
+        }
+
+        .contact-text {
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-label {
+
+            font-size: 0.75rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            color: rgba(255,255,255,0.45);
+
+            margin-bottom: 3px;
+        }
+
+        .contact-value {
+
+            font-size: 0.95rem;
+
+            font-weight: 600;
         }
 
         /* FOOTER */
@@ -350,9 +512,9 @@
 
         .footer p {
 
-            color: rgba(203,213,225,0.48);
-
             font-size: 0.72rem;
+
+            color: rgba(255,255,255,0.42);
 
             line-height: 1.8;
         }
@@ -362,15 +524,13 @@
         @media (max-width: 600px) {
 
             .main-container {
+
                 max-width: 100%;
             }
 
             .main-title {
-                font-size: 2.2rem;
-            }
 
-            .section {
-                padding: 22px 18px;
+                font-size: 2.1rem;
             }
         }
 
@@ -382,9 +542,9 @@
 
     <main class="main-container">
 
-        <!-- HEADER -->
+        <!-- HERO -->
 
-        <header class="header">
+        <section class="hero">
 
             <img 
                 src="https://res.cloudinary.com/dh3cjks1a/image/upload/v1778276120/Captura_de_pantalla_2026-05-08_153505_elf62i.jpg"
@@ -397,53 +557,65 @@
                 Villalvazo
             </h1>
 
-        </header>
+            <p class="hero-subtitle">
+                Recursos, oportunidades internacionales y orientación académica basada en experiencia científica y profesional en Europa.
+            </p>
+
+        </section>
 
         <!-- RECURSOS -->
 
         <section class="section">
 
-            <h2 class="section-title">
-                Recursos académicos
-            </h2>
+            <div class="section-top">
 
-            <p class="section-text">
-                A continuación, se presentan recursos clave para la búsqueda de financiamiento en instituciones de alto prestigio:
-            </p>
-
-            <div class="resource-card">
-
-                <a href="https://www.daad.mx" target="_blank">
-
-                    <div class="resource-title">
-                        DAAD México: Estudiar en Alemania
-                    </div>
-
-                    <div class="resource-description">
-                        Plataforma oficial para intercambios y becas de posgrado en Alemania.
-                    </div>
-
-                    <div class="resource-link">
-                        https://www.daad.mx
-                    </div>
-
-                </a>
+                <h2 class="section-title">
+                    Recursos académicos
+                </h2>
 
             </div>
 
-            <div class="resource-card">
+            <div class="section-content">
 
-                <a href="https://www.vivirviajaramar.com" target="_blank">
+                <p class="section-text">
+                    A continuación, se presentan recursos clave para la búsqueda de financiamiento en instituciones de alto prestigio:
+                </p>
 
-                    <div class="resource-title">
-                        11 Mejores Becas para Mexicanos (Vivir Viajar Amar)
-                    </div>
+                <div class="resource-card">
 
-                    <div class="resource-link">
-                        https://www.vivirviajaramar.com
-                    </div>
+                    <a href="https://www.daad.mx" target="_blank">
 
-                </a>
+                        <div class="resource-title">
+                            DAAD México: Estudiar en Alemania
+                        </div>
+
+                        <div class="resource-description">
+                            Plataforma oficial para intercambios y becas de posgrado en Alemania.
+                        </div>
+
+                        <div class="resource-link">
+                            https://www.daad.mx
+                        </div>
+
+                    </a>
+
+                </div>
+
+                <div class="resource-card">
+
+                    <a href="https://www.vivirviajaramar.com" target="_blank">
+
+                        <div class="resource-title">
+                            11 Mejores Becas para Mexicanos (Vivir Viajar Amar)
+                        </div>
+
+                        <div class="resource-link">
+                            https://www.vivirviajaramar.com
+                        </div>
+
+                    </a>
+
+                </div>
 
             </div>
 
@@ -453,14 +625,26 @@
 
         <section class="section">
 
-            <h2 class="section-title">
-                Sobre el Dr. Manuel Villalvazo
-            </h2>
+            <div class="section-top">
 
-            <p class="bio-text">
-                Científico mexicano con trayectoria profesional en Europa y experiencia en proyectos académicos e internacionales. 
-                Comparte orientación y recursos para jóvenes interesados en oportunidades educativas, becas y desarrollo profesional internacional.
-            </p>
+                <h2 class="section-title">
+                    Sobre el Dr. Manuel Villalvazo
+                </h2>
+
+            </div>
+
+            <div class="section-content">
+
+                <div class="bio-highlight">
+
+                    <p>
+                        Científico mexicano con trayectoria profesional en Europa y experiencia en proyectos académicos e internacionales. 
+                        Comparte herramientas, orientación y recursos para jóvenes interesados en becas, oportunidades educativas y desarrollo profesional internacional.
+                    </p>
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -468,29 +652,37 @@
 
         <section class="section">
 
-            <h2 class="section-title">
-                ¿Para quién puede ser útil?
-            </h2>
+            <div class="section-top">
 
-            <ul class="info-list">
+                <h2 class="section-title">
+                    ¿Para quién puede ser útil?
+                </h2>
 
-                <li>
-                    Jóvenes que no saben qué carrera elegir
-                </li>
+            </div>
 
-                <li>
-                    Estudiantes que buscan oportunidades en Europa
-                </li>
+            <div class="section-content">
 
-                <li>
-                    Profesionistas que desean mayor claridad profesional
-                </li>
+                <ul class="info-list">
 
-                <li>
-                    Personas interesadas en becas y desarrollo académico internacional
-                </li>
+                    <li>
+                        Jóvenes que no saben qué carrera elegir
+                    </li>
 
-            </ul>
+                    <li>
+                        Estudiantes que buscan oportunidades en Europa
+                    </li>
+
+                    <li>
+                        Profesionistas que desean mayor claridad profesional
+                    </li>
+
+                    <li>
+                        Personas interesadas en becas y desarrollo académico internacional
+                    </li>
+
+                </ul>
+
+            </div>
 
         </section>
 
@@ -498,27 +690,59 @@
 
         <section class="section">
 
-            <h2 class="section-title">
-                Contáctame. Yo te digo cómo.
-            </h2>
+            <div class="section-top">
 
-            <div class="contact-links">
+                <h2 class="section-title">
+                    Contáctame. Yo te digo cómo.
+                </h2>
 
-                <a href="https://wa.me/351925179992" class="contact-btn">
+            </div>
 
-                    <i class="fab fa-whatsapp"></i>
+            <div class="section-content">
 
-                    WhatsApp
+                <div class="contact-buttons">
 
-                </a>
+                    <a href="https://wa.me/351925179992" class="contact-btn">
 
-                <a href="mailto:villazol.pt@gmail.com" class="contact-btn">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
 
-                    <i class="fas fa-envelope"></i>
+                        <div class="contact-text">
 
-                    villazol.pt@gmail.com
+                            <span class="contact-label">
+                                WhatsApp
+                            </span>
 
-                </a>
+                            <span class="contact-value">
+                                +351 925 179 992
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                    <a href="mailto:villazol.pt@gmail.com" class="contact-btn">
+
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+
+                        <div class="contact-text">
+
+                            <span class="contact-label">
+                                Correo electrónico
+                            </span>
+
+                            <span class="contact-value">
+                                villazol.pt@gmail.com
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                </div>
 
             </div>
 
