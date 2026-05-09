@@ -25,14 +25,22 @@
         :root {
 
             --bg-dark: #020617;
+            --bg-soft: #0F172A;
 
             --blue-main: #60A5FA;
-            --blue-soft: #1E293B;
+            --blue-soft: rgba(96,165,250,0.12);
 
             --white: #FFFFFF;
             --gray: #CBD5E1;
 
             --border: rgba(255,255,255,0.08);
+
+            --card:
+                linear-gradient(
+                    180deg,
+                    rgba(255,255,255,0.06) 0%,
+                    rgba(255,255,255,0.03) 100%
+                );
         }
 
         * {
@@ -53,7 +61,7 @@
 
             background:
                 radial-gradient(circle at top, rgba(96,165,250,0.12), transparent 35%),
-                radial-gradient(circle at bottom, rgba(30,41,59,0.35), transparent 45%),
+                radial-gradient(circle at bottom, rgba(30,41,59,0.30), transparent 45%),
                 linear-gradient(180deg, #020617 0%, #0F172A 100%);
 
             color: var(--white);
@@ -71,13 +79,14 @@
 
             padding:
                 42px
-                24px
+                22px
                 32px;
 
             display: flex;
             flex-direction: column;
+            gap: 26px;
 
-            background: rgba(2,6,23,0.45);
+            background: rgba(2,6,23,0.42);
 
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
@@ -93,38 +102,38 @@
 
         .header {
 
+            text-align: center;
+
             display: flex;
             flex-direction: column;
             align-items: center;
 
-            text-align: center;
-
-            margin-bottom: 38px;
+            padding-bottom: 8px;
         }
 
         .profile-image {
 
-            width: 140px;
-            height: 140px;
+            width: 138px;
+            height: 138px;
 
             border-radius: 50%;
 
             object-fit: cover;
 
-            margin-bottom: 24px;
+            margin-bottom: 22px;
 
             border: 2px solid rgba(255,255,255,0.08);
 
             box-shadow:
-                0 10px 30px rgba(0,0,0,0.45),
-                0 0 50px rgba(96,165,250,0.12);
+                0 12px 35px rgba(0,0,0,0.45),
+                0 0 55px rgba(96,165,250,0.10);
         }
 
         .main-title {
 
             font-family: 'Manrope', sans-serif;
 
-            font-size: 2.6rem;
+            font-size: 2.5rem;
 
             line-height: 0.95;
 
@@ -137,12 +146,24 @@
 
         .section {
 
-            margin-bottom: 32px;
+            background: var(--card);
+
+            border: 1px solid rgba(255,255,255,0.07);
+
+            border-radius: 24px;
+
+            padding: 24px 20px;
+
+            backdrop-filter: blur(12px);
+
+            box-shadow:
+                inset 0 1px 0 rgba(255,255,255,0.03),
+                0 8px 30px rgba(0,0,0,0.18);
         }
 
         .section-title {
 
-            font-size: 0.82rem;
+            font-size: 0.78rem;
 
             text-transform: uppercase;
 
@@ -150,7 +171,7 @@
 
             color: var(--blue-main);
 
-            margin-bottom: 14px;
+            margin-bottom: 16px;
 
             font-weight: 700;
         }
@@ -159,116 +180,82 @@
 
             color: var(--gray);
 
-            font-size: 0.9rem;
+            font-size: 0.92rem;
 
-            line-height: 1.8;
+            line-height: 1.85;
 
             margin-bottom: 18px;
         }
 
-        /* CARDS */
+        /* RECURSOS */
 
-        .card {
+        .resource-card {
 
-            width: 100%;
+            background: rgba(255,255,255,0.03);
 
-            background: rgba(255,255,255,0.045);
+            border: 1px solid rgba(255,255,255,0.06);
 
-            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
 
-            border-radius: 20px;
-
-            padding: 20px;
+            padding: 18px;
 
             margin-bottom: 14px;
 
             transition: 0.25s ease;
-
-            backdrop-filter: blur(10px);
         }
 
-        .card:hover {
+        .resource-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .resource-card:hover {
 
             transform: translateY(-2px);
 
-            background: rgba(96,165,250,0.08);
-
             border-color: rgba(96,165,250,0.18);
+
+            background: rgba(96,165,250,0.06);
         }
 
-        .card a {
+        .resource-card a {
 
             text-decoration: none;
 
             color: white;
         }
 
-        .card-title {
+        .resource-title {
 
-            font-size: 1rem;
+            font-size: 0.98rem;
 
             font-weight: 600;
 
-            margin-bottom: 10px;
+            line-height: 1.6;
 
-            line-height: 1.5;
+            margin-bottom: 10px;
         }
 
-        .card-description {
+        .resource-description {
 
             color: var(--gray);
 
-            font-size: 0.88rem;
+            font-size: 0.87rem;
 
-            line-height: 1.7;
+            line-height: 1.8;
+
+            margin-bottom: 12px;
         }
 
         .resource-link {
 
-            margin-top: 12px;
+            color: rgba(203,213,225,0.65);
 
-            font-size: 0.82rem;
-
-            color: rgba(203,213,225,0.72);
+            font-size: 0.78rem;
 
             word-break: break-word;
         }
 
-        /* DIVIDER */
-
-        .divider {
-
-            width: 100%;
-            height: 1px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    transparent,
-                    rgba(255,255,255,0.12),
-                    transparent
-                );
-
-            margin:
-                8px
-                0
-                34px;
-        }
-
         /* BIO */
-
-        .bio-box {
-
-            background: rgba(255,255,255,0.04);
-
-            border: 1px solid rgba(255,255,255,0.06);
-
-            border-radius: 20px;
-
-            padding: 22px;
-
-            margin-bottom: 30px;
-        }
 
         .bio-text {
 
@@ -276,21 +263,10 @@
 
             font-size: 0.92rem;
 
-            line-height: 1.9;
+            line-height: 1.95;
         }
 
-        /* INFO */
-
-        .info-box {
-
-            background: rgba(255,255,255,0.04);
-
-            border: 1px solid rgba(255,255,255,0.06);
-
-            border-radius: 20px;
-
-            padding: 22px;
-        }
+        /* LISTA */
 
         .info-list {
 
@@ -325,7 +301,7 @@
 
             width: 100%;
 
-            padding: 16px 18px;
+            padding: 17px 18px;
 
             border-radius: 18px;
 
@@ -335,9 +311,9 @@
 
             font-weight: 600;
 
-            background: rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.04);
 
-            border: 1px solid rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.07);
 
             display: flex;
             align-items: center;
@@ -349,11 +325,11 @@
 
         .contact-btn:hover {
 
+            transform: translateY(-2px);
+
             background: rgba(96,165,250,0.08);
 
-            border-color: rgba(96,165,250,0.18);
-
-            transform: translateY(-2px);
+            border-color: rgba(96,165,250,0.20);
         }
 
         .contact-btn i {
@@ -367,20 +343,18 @@
 
         .footer {
 
-            margin-top: auto;
-
-            padding-top: 8px;
-
             text-align: center;
+
+            padding-top: 4px;
         }
 
         .footer p {
 
-            color: rgba(203,213,225,0.55);
+            color: rgba(203,213,225,0.48);
 
             font-size: 0.72rem;
 
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         /* MOBILE */
@@ -392,7 +366,11 @@
             }
 
             .main-title {
-                font-size: 2.3rem;
+                font-size: 2.2rem;
+            }
+
+            .section {
+                padding: 22px 18px;
             }
         }
 
@@ -433,15 +411,15 @@
                 A continuación, se presentan recursos clave para la búsqueda de financiamiento en instituciones de alto prestigio:
             </p>
 
-            <div class="card">
+            <div class="resource-card">
 
                 <a href="https://www.daad.mx" target="_blank">
 
-                    <div class="card-title">
+                    <div class="resource-title">
                         DAAD México: Estudiar en Alemania
                     </div>
 
-                    <div class="card-description">
+                    <div class="resource-description">
                         Plataforma oficial para intercambios y becas de posgrado en Alemania.
                     </div>
 
@@ -453,11 +431,11 @@
 
             </div>
 
-            <div class="card">
+            <div class="resource-card">
 
                 <a href="https://www.vivirviajaramar.com" target="_blank">
 
-                    <div class="card-title">
+                    <div class="resource-title">
                         11 Mejores Becas para Mexicanos (Vivir Viajar Amar)
                     </div>
 
@@ -471,26 +449,18 @@
 
         </section>
 
-        <!-- DIVIDER -->
-
-        <div class="divider"></div>
-
         <!-- BIO -->
 
         <section class="section">
 
-            <div class="bio-box">
+            <h2 class="section-title">
+                Sobre el Dr. Manuel Villalvazo
+            </h2>
 
-                <h2 class="section-title">
-                    Sobre el Dr. Manuel Villalvazo
-                </h2>
-
-                <p class="bio-text">
-                    Científico mexicano con trayectoria profesional en Europa y experiencia en proyectos académicos e internacionales. 
-                    A través de conferencias y orientación personalizada, comparte herramientas, perspectivas y oportunidades para jóvenes interesados en su desarrollo profesional y académico.
-                </p>
-
-            </div>
+            <p class="bio-text">
+                Científico mexicano con trayectoria profesional en Europa y experiencia en proyectos académicos e internacionales. 
+                Comparte orientación y recursos para jóvenes interesados en oportunidades educativas, becas y desarrollo profesional internacional.
+            </p>
 
         </section>
 
@@ -498,33 +468,29 @@
 
         <section class="section">
 
-            <div class="info-box">
+            <h2 class="section-title">
+                ¿Para quién puede ser útil?
+            </h2>
 
-                <h2 class="section-title">
-                    ¿Para quién puede ser útil?
-                </h2>
+            <ul class="info-list">
 
-                <ul class="info-list">
+                <li>
+                    Jóvenes que no saben qué carrera elegir
+                </li>
 
-                    <li>
-                        Jóvenes que no saben qué carrera elegir
-                    </li>
+                <li>
+                    Estudiantes que buscan oportunidades en Europa
+                </li>
 
-                    <li>
-                        Estudiantes que buscan oportunidades en Europa
-                    </li>
+                <li>
+                    Profesionistas que desean mayor claridad profesional
+                </li>
 
-                    <li>
-                        Profesionistas que desean mayor claridad profesional
-                    </li>
+                <li>
+                    Personas interesadas en becas y desarrollo académico internacional
+                </li>
 
-                    <li>
-                        Personas interesadas en becas y desarrollo académico internacional
-                    </li>
-
-                </ul>
-
-            </div>
+            </ul>
 
         </section>
 
