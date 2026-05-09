@@ -7,27 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <title>Dr. Manuel Villalvazo | Orientación Académica y Profesional</title>
+    <title>Dr. Manuel Villalvazo | Recursos Académicos</title>
 
     <meta 
         name="description" 
-        content="Conversaciones y orientación para jóvenes que buscan claridad académica y profesional."
+        content="Recursos académicos, becas y contacto profesional del Dr. Manuel Villalvazo."
     >
 
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
-    <!-- ICONS -->
+    <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
 
         :root {
+
             --bg-dark: #020617;
-            --bg-card: rgba(15, 23, 42, 0.75);
+            --bg-card: rgba(15, 23, 42, 0.72);
 
             --blue-soft: #1E3A5F;
-            --blue-accent: #3B82F6;
+            --blue-accent: #60A5FA;
 
             --white: #FFFFFF;
             --gray: #CBD5E1;
@@ -42,15 +43,17 @@
         }
 
         html, body {
+
             width: 100%;
             min-height: 100%;
+
             overflow-x: hidden;
             overflow-y: auto;
 
             font-family: 'Inter', sans-serif;
 
             background:
-                radial-gradient(circle at top, rgba(59,130,246,0.15), transparent 35%),
+                radial-gradient(circle at top, rgba(96,165,250,0.14), transparent 35%),
                 radial-gradient(circle at bottom, rgba(30,58,95,0.25), transparent 45%),
                 linear-gradient(180deg, #020617 0%, #0F172A 100%);
 
@@ -60,7 +63,6 @@
             justify-content: center;
         }
 
-        /* CONTENEDOR PRINCIPAL */
         .main-container {
 
             width: 100%;
@@ -69,20 +71,17 @@
             min-height: 100dvh;
 
             padding:
-                40px
+                38px
                 24px
                 30px;
 
             display: flex;
             flex-direction: column;
-            align-items: center;
 
-            position: relative;
+            background: rgba(2,6,23,0.42);
 
-            background: rgba(2,6,23,0.45);
-
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
 
             border-left: 1px solid var(--border);
             border-right: 1px solid var(--border);
@@ -92,21 +91,22 @@
         }
 
         /* HEADER */
+
         .header {
-            width: 100%;
+
             display: flex;
             flex-direction: column;
             align-items: center;
+
             text-align: center;
 
-            margin-bottom: 35px;
+            margin-bottom: 34px;
         }
 
-        /* FOTO */
         .profile-image {
 
-            width: 145px;
-            height: 145px;
+            width: 135px;
+            height: 135px;
 
             border-radius: 50%;
 
@@ -118,187 +118,211 @@
 
             box-shadow:
                 0 10px 30px rgba(0,0,0,0.4),
-                0 0 50px rgba(59,130,246,0.15);
+                0 0 45px rgba(96,165,250,0.12);
         }
 
-        /* LABEL SUPERIOR */
-        .small-label {
-
-            font-size: 0.78rem;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-
-            color: var(--blue-accent);
-
-            font-weight: 600;
-
-            margin-bottom: 12px;
-        }
-
-        /* TITULO */
         .main-title {
 
             font-family: 'Space Grotesk', sans-serif;
 
-            font-size: 2.7rem;
+            font-size: 2.4rem;
 
-            line-height: 0.95;
+            line-height: 1;
 
             letter-spacing: -2px;
 
-            margin-bottom: 18px;
+            margin-bottom: 14px;
 
             font-weight: 700;
         }
 
-        /* SUBTEXTO */
         .subtitle {
 
             color: var(--gray);
 
-            font-size: 0.96rem;
+            font-size: 0.95rem;
 
-            line-height: 1.65;
+            line-height: 1.7;
 
             max-width: 320px;
         }
 
-        /* BOTONES */
-        .nav-links {
+        /* SECCIONES */
 
-            width: 100%;
+        .section {
 
-            display: flex;
-            flex-direction: column;
-
-            gap: 14px;
-
-            margin-bottom: 38px;
+            margin-bottom: 24px;
         }
 
-        .btn {
+        .section-title {
+
+            font-size: 0.9rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            color: var(--blue-accent);
+
+            margin-bottom: 14px;
+
+            font-weight: 700;
+        }
+
+        /* CARDS */
+
+        .card {
 
             width: 100%;
-
-            padding: 18px 20px;
-
-            border-radius: 18px;
-
-            text-decoration: none;
-
-            color: var(--white);
-
-            font-weight: 600;
-
-            font-size: 0.95rem;
 
             background: rgba(255,255,255,0.05);
 
             border: 1px solid rgba(255,255,255,0.08);
 
-            backdrop-filter: blur(12px);
+            border-radius: 18px;
 
-            transition:
-                transform 0.25s ease,
-                background 0.25s ease,
-                border 0.25s ease;
+            padding: 18px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
+            margin-bottom: 14px;
 
-            box-shadow:
-                0 8px 30px rgba(0,0,0,0.18);
+            transition: 0.25s ease;
+
+            backdrop-filter: blur(10px);
         }
 
-        .btn:hover {
+        .card:hover {
 
             transform: translateY(-2px);
 
-            background: rgba(59,130,246,0.12);
+            background: rgba(96,165,250,0.08);
 
-            border: 1px solid rgba(59,130,246,0.25);
+            border-color: rgba(96,165,250,0.18);
         }
 
-        .btn i {
-            font-size: 0.95rem;
-            opacity: 0.9;
+        .card a {
+
+            text-decoration: none;
+
+            color: white;
         }
 
-        /* INFO EXTRA */
-        .info-box {
+        .card-title {
+
+            font-size: 0.96rem;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+
+            line-height: 1.5;
+        }
+
+        .card-description {
+
+            color: var(--gray);
+
+            font-size: 0.86rem;
+
+            line-height: 1.7;
+        }
+
+        /* CONTACTO */
+
+        .contact-links {
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 14px;
+        }
+
+        .contact-btn {
 
             width: 100%;
+
+            padding: 16px 18px;
+
+            border-radius: 18px;
+
+            text-decoration: none;
+
+            color: white;
+
+            font-weight: 600;
+
+            background: rgba(255,255,255,0.05);
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            transition: 0.25s ease;
+        }
+
+        .contact-btn:hover {
+
+            background: rgba(96,165,250,0.08);
+
+            border-color: rgba(96,165,250,0.18);
+
+            transform: translateY(-2px);
+        }
+
+        .contact-btn i {
+
+            width: 18px;
+
+            text-align: center;
+        }
+
+        /* LISTA */
+
+        .info-list {
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
+        .info-item {
 
             background: rgba(255,255,255,0.04);
 
             border: 1px solid rgba(255,255,255,0.06);
 
-            border-radius: 20px;
+            border-radius: 16px;
 
-            padding: 22px;
-
-            margin-bottom: 30px;
-        }
-
-        .info-box h2 {
-
-            font-size: 1rem;
-
-            margin-bottom: 14px;
-
-            font-weight: 600;
-        }
-
-        .info-box p {
+            padding: 16px;
 
             color: var(--gray);
 
-            font-size: 0.9rem;
-
             line-height: 1.7;
 
-            margin-bottom: 12px;
+            font-size: 0.9rem;
         }
 
         /* FOOTER */
-        .footer {
 
-            text-align: center;
+        .footer {
 
             margin-top: auto;
 
-            padding-top: 10px;
+            padding-top: 12px;
+
+            text-align: center;
         }
 
         .footer p {
 
-            color: rgba(203,213,225,0.6);
+            color: rgba(203,213,225,0.55);
 
             font-size: 0.72rem;
 
-            line-height: 1.6;
-
-            letter-spacing: 1px;
-        }
-
-        /* MOBILE */
-        @media (max-width: 600px) {
-
-            .main-container {
-                max-width: 100%;
-            }
-
-            .main-title {
-                font-size: 2.35rem;
-            }
-
-            .subtitle {
-                font-size: 0.92rem;
-            }
+            line-height: 1.7;
         }
 
     </style>
@@ -310,90 +334,134 @@
     <main class="main-container">
 
         <!-- HEADER -->
+
         <header class="header">
 
-            <!-- FOTO -->
             <img 
                 src="https://res.cloudinary.com/dh3cjks1a/image/upload/v1778276120/Captura_de_pantalla_2026-05-08_153505_elf62i.jpg"
                 alt="Dr. Manuel Villalvazo"
                 class="profile-image"
             >
 
-            <!-- LABEL -->
-            <span class="small-label">
-                Científico Mexicano en Europa
-            </span>
-
-            <!-- TITULO -->
             <h1 class="main-title">
                 Dr. Manuel<br>
                 Villalvazo
             </h1>
 
-            <!-- SUBTEXTO -->
             <p class="subtitle">
-
-                Conversaciones y orientación para jóvenes que buscan tomar decisiones académicas y profesionales con mayor claridad.
-
+                Recursos académicos, oportunidades internacionales y contacto profesional.
             </p>
 
         </header>
 
-        <!-- BOTONES -->
-        <nav class="nav-links">
+        <!-- RECURSOS -->
 
-            <a href="#" class="btn">
-                <i class="fas fa-calendar-alt"></i>
-                Solicitar sesión personalizada
-            </a>
+        <section class="section">
 
-            <a href="#" class="btn">
-                <i class="fas fa-graduation-cap"></i>
-                Becas y oportunidades en Europa
-            </a>
+            <h2 class="section-title">
+                Recursos recomendados
+            </h2>
 
-            <a href="#" class="btn">
-                <i class="fas fa-chalkboard-teacher"></i>
-                Conferencias para instituciones
-            </a>
+            <div class="card">
 
-            <a href="#" class="btn">
-                <i class="fab fa-linkedin"></i>
-                Trayectoria profesional
-            </a>
+                <a href="https://www.daad.mx" target="_blank">
 
-        </nav>
+                    <div class="card-title">
+                        DAAD México — Estudiar en Alemania
+                    </div>
 
-        <!-- INFO EXTRA -->
-        <section class="info-box">
+                    <div class="card-description">
+                        Plataforma oficial para intercambios académicos y becas de posgrado en Alemania.
+                    </div>
 
-            <h2>
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <a href="https://www.vivirviajaramar.com" target="_blank">
+
+                    <div class="card-title">
+                        11 Mejores Becas para Mexicanos
+                    </div>
+
+                    <div class="card-description">
+                        Recursos y oportunidades para estudiar y desarrollarse profesionalmente en el extranjero.
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACTO -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Contacto
+            </h2>
+
+            <div class="contact-links">
+
+                <a href="https://wa.me/351925179992" class="contact-btn">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                    WhatsApp
+
+                </a>
+
+                <a href="mailto:villazol.pt@gmail.com" class="contact-btn">
+
+                    <i class="fas fa-envelope"></i>
+
+                    villazol.pt@gmail.com
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- UTILIDAD -->
+
+        <section class="section">
+
+            <h2 class="section-title">
                 ¿Para quién puede ser útil?
             </h2>
 
-            <p>
-                • Jóvenes que no saben qué carrera elegir
-            </p>
+            <div class="info-list">
 
-            <p>
-                • Estudiantes que buscan oportunidades en Europa
-            </p>
+                <div class="info-item">
+                    Jóvenes que no saben qué carrera elegir
+                </div>
 
-            <p>
-                • Profesionistas que desean mayor claridad profesional
-            </p>
+                <div class="info-item">
+                    Estudiantes que buscan oportunidades en Europa
+                </div>
 
-            <p>
-                • Personas interesadas en becas y desarrollo académico internacional
-            </p>
+                <div class="info-item">
+                    Profesionistas que desean mayor claridad profesional
+                </div>
+
+                <div class="info-item">
+                    Personas interesadas en becas y desarrollo académico internacional
+                </div>
+
+            </div>
 
         </section>
 
         <!-- FOOTER -->
+
         <footer class="footer">
 
             <p>
-                Orientación basada en experiencia internacional y trayectoria científica
+                Información y recursos compartidos con fines académicos y profesionales.
             </p>
 
         </footer>
